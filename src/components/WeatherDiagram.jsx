@@ -40,7 +40,7 @@ class WeatherDiagram extends React.Component {
 		top: 5, right: 30, left: 20, bottom: 5,
 	}}
 >
-<XAxis dataKey="name" />
+<XAxis dataKey="name"/>
 	<Tooltip />
 	<Legend />
 	<Line yAxisId="left" type="monotone" dataKey="temp" stroke="#7D4CDB" activeDot={{ r: 8 }} />

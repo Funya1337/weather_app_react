@@ -1,0 +1,7 @@
+{
+  "title": "Weather",
+  "get": "Get Weather",
+  "city": "City",
+  "pressure": "Pressure",
+  "type": "Type"
+}

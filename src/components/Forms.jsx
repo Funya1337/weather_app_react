@@ -30,21 +30,23 @@ class Forms extends React.Component {
 			<div>
 			<Grommet theme={grommet}>
 			<Box align="center" pad="large">
-			<FormField label="Weather" htmlFor="text-input" {...this.props}>
+			<FormField label={this.props.locale.title} htmlFor="text-input" {...this.props}>
 			<TextInput
 			id="text-input"
-			placeholder="City"
+			placeholder={this.props.locale.city}
 			value={value}
 			onChange={this.onChange}
 			onSelect={this.onSelect}
 			suggestions={suggestions}
 			/>
 			</FormField>
-			<Button onClick={this.props.fetchWeather} type="submit" primary label="Submit" />
+			<Button onClick={this.props.fetchWeather} type="submit" primary label={this.props.locale.get} />
+			<br/>
+			<Button type="submit" primary label="RU" />
 			<br/>
 			<Text size="large" weight="bold" color="#7D4CDB">
-			pressure: {this.props.weatherDataFront.pressure} <br/>
-			type: {this.props.type}
+			{this.props.locale.pressure}: {this.props.weatherDataFront.pressure} <br/>
+			{this.props.locale.type}: {this.props.type}
 			</Text>
 			</Box>
 			</Grommet>
